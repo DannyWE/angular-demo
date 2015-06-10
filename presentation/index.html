@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="../demo/bower_components/reveal-js/css/reveal.min.css">
+    <link rel="stylesheet" href="../demo/bower_components/reveal-js/css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../demo/bower_components/reveal-js/lib/css/zenburn.css">
+
+</head>
+
+<body ng-app="myApp">
+    <div class="reveal" ng-controller="demoController">
+        <div class="slides">
+            <section>What is great about Angular.js</section>
+            <section>
+                <h3>Angular is MVW javascript framework</h3>
+            </section>
+            <section>
+                <section><h3>Simple two way data binding</h3></section>
+                <section ng-cloak>
+                    <p>Addition example</p>
+                    <p>a: <input type="text" ng-model="a" /></p>
+                    <p>b: <input type="text" ng-model="b" /></p>
+                    <br/>
+                    <p><label>The sum of the result: {{a-0 + (b-0)|number}}</label></p>
+
+
+
+                </section>
+                <section>
+                    <h4>The code:</h4>
+                    <p>&lt;input ng-model=&quot;a&quot; /&gt;</p>
+                    <p>&lt;input ng-model=&quot;b&quot; /&gt;</p>
+
+                    <br/>
+                    <p>&lt;label&gt; { { a + b } } &lt;/label&gt;</p>
+                </section>
+
+                <section>
+                    <div>
+
+
+                        <div id="chart" style="position: absolute; top:-300px; left: 275px;">
+                            <p>Dev: <input type="text" ng-model="dev.value" /></p>
+                            <p>B A: <input type="text" ng-model="ba.value" /></p>
+                            <p>Q A: <input type="text" ng-model="qa.value" /></p>
+                            <svg style="width: 500px; height:500px"></svg>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h4>Simple template</h4>
+
+                    <div ng-repeat="n in [dev, ba, qa] track by $index">
+                        {{n.label}} : {{n.value}}
+                    </div>
+
+                </section>
+
+                <section>
+                    <h4>The code</h4>
+
+                    <p> &lt;div ng-repeat=&quot;n in [dev, ba, qa] track by $index&quot;&gt; </p>
+                    <p> { { n.label }} : { { n.value }}</p>
+                    <p>&lt;/div&gt;</p>
+                </section>
+
+            </section>
+
+            <section>
+                <section>
+                    <h4>Directive</h4>
+
+
+                </section>
+
+                <section>
+
+                    <a href="test.html" target="_blank">examples</a>
+
+                </section>
+
+                <section>
+
+                    <h4>The code</h4>
+
+                    <img src="navigation.png" />
+
+                    <br/>
+                </section>
+
+                <section>
+
+                    <img src="javascript.png" />
+
+                </section>
+
+            </section>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+<script src="../demo/bower_components/reveal-js/lib/js/head.min.js"></script>
+<script language="javascript" src="../demo/bower_components/reveal-js/js/reveal.min.js"></script>
+<script language="javascript" src="../demo/bower_components/angular/angular.min.js"></script>
+<script src="../demo/bower_components/d3/d3.js"></script>
+<script src="../demo/bower_components/nvd3/build/nv.d3.js"></script>
+<link rel="stylesheet" href="../demo/bower_components/nvd3/build/nv.d3.css"/>
+<script language="javascript" src="demo.js"></script>
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: '../demo/bower_components/reveal-js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: '../demo/bower_components/reveal-js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '../demo/bower_components/reveal-js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '../demo/bower_components/reveal-js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '../demo/bower_components/reveal-js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: '../demo/bower_components/reveal-js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+
+
+
+</script>
+</html>
+
+

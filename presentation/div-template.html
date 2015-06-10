@@ -1,0 +1,25 @@
+<header class="rui-header rui-clearfix">
+    <div class="rui-grid rui-header-container">
+        <a title="realcommercial.com.au homepage" class="rui-main-logo">
+            <img src="//s1.rui.au.reastatic.net/rui-static/img/rca-logo-v2.png"
+                 alt="realcommercial.com.au Australia's No.1 commercial property site"/>
+        </a>
+        <div class="rui-clearboth"></div>
+        <button class="rui-burger-toggle rui-icon rui-icon-navdeck rui-button-no-style">
+            <span class="rui-visuallyhidden">Menu</span>
+            <span class="hit-box"></span>
+        </button>
+    </div>
+    <hr class="rui-clearboth"/>
+    <div class="rui-grid rui-nav-container rui-burger-container">
+        <nav class="rui-main-nav" id="rui-main-nav">
+            <ul>
+                <li class="rui-nav-tab" ng-repeat="link in data track by $index">
+                <a href="#" title="Commercial property for sale">
+                    <span>{{link}}</span>
+                </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

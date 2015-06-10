@@ -1,0 +1,21 @@
+{
+  "name": "angular-demo",
+  "version": "0.0.0",
+  "devDependencies": {
+    "mocha": "~1.19.0",
+    "expect": "~0.3.1",
+    "html5shiv": "~3.7.2",
+    "readmore": ">=2.0.5",
+    "jquery": "1.11.0",
+    "bootstrap": "~3.3.4",
+    "reveal-js": "~2.6.2",
+    "angular": "~1.4.0"
+  },
+  "resolutions": {
+    "jquery": "1.11.0"
+  },
+  "dependencies": {
+    "d3": "~3.5.5",
+    "nvd3": "~1.7.1"
+  }
+}
